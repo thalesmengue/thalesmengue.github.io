@@ -1,0 +1,1 @@
+**Repository created with the purpose of fixing HTML, JS and TailwindCSS contents.**
