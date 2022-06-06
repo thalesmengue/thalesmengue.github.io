@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="../src/input.css">
+    <script src="https://kit.fontawesome.com/7022da3971.js" crossorigin="anonymous"></script>
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+    <title>Home</title>
+</head>
+<body class="bg-white dark:bg-slate-800">
+<nav class="flex items-center shadow-lg p-3 flex-wrap">
+    <a href="home.html" class="p-2 mr-3 inline-flex items-center ml-32"><span
+            class="font-mono tracking-wider text-base hover:text-purple-700 dark:text-white dark:hover:text-purple-700">Home</span></a>
+    <a href="about.html" class="p-2 mr-3 inline-flex items-center"><span
+            class="font-mono tracking-wider text-base hover:text-purple-700 dark:text-white dark:hover:text-purple-700">About</span></a>
+    <div class="top-nav w-full lg:inline-flex lg:flex-grow lg:w-auto" id="navigation">
+        <div class="lg:inline-flex lg:flex-row lg:ml-auto">
+            <button
+                    id="theme-toggle"
+                    type="button"
+                    class="mr-8 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-500 rounded-lg text-sm p-2.5"
+            >
+                <svg
+                        id="theme-toggle-dark-icon"
+                        class="w-5 h-5 hidden"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                            d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                    ></path>
+                </svg>
+                <svg
+                        id="theme-toggle-light-icon"
+                        class="w-5 h-5 hidden"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                    ></path>
+                </svg>
+            </button>
+            <a href="https://github.com/thalesmengue" target="_blank"
+               class="lg:inline-flex lg:w-auto px-3 py-2 rounded text-black-900 hover:text-purple-700"><i
+                    class="fa-brands fa-github text-2xl dark:text-white dark:hover:text-purple-700"></i></a>
+            <a href="https://www.linkedin.com/in/thales-machado-mengue/" target="_blank"
+               class="lg:inline-flex lg:w-auto px-3 py-2 rounded hover:text-purple-700"><i
+                    class="fa-brands fa-linkedin-in text-2xl dark:text-white dark:hover:text-purple-700"></i></a>
+            <a href="https://twitter.com/thalesmengue" target="_blank"
+               class="lg:inline-flex lg:w-auto px-3 py-2 rounded hover:text-purple-700 mr-16"><i
+                    class="fa-brands fa-twitter text-2xl dark:text-white dark:hover:text-purple-700"></i></a>
+            <a class="hover:opacity-50" href="../index.html"><img class="lg:inline-flex lg:w-auto px-3 py-2"
+                                                                  src="https://img.icons8.com/color/32/undefined/brazil.png"/></a>
+            <a class="hover:opacity-50" href="home.html"><img class="lg:inline-flex lg:w-auto px-3 py-2 mr-32"
+                                                              src="https://img.icons8.com/color/32/undefined/usa.png"/></a>
+        </div>
+    </div>
+</nav>
+<div class="flex">
+    <div class="flex-none h-48 w-2/4 space-x-2 ml-32">
+        <p class="mt-36 font-mono text-2xl tracking-wider dark:text-white"> Hi, my name is <span
+                class="text-purple-700 font-mono">Thales Machado!</span>
+        </p>
+        <p class="font-mono mt-4 tracking-wider ml-32 text-black dark:text-white">
+            I am a young technology student, currently i'm in Law College, on Faculdade de Direito de Santa Maria
+            (FADISMA), it's been a few months since i started a journey, the journey to become a Fullstack Web
+            Developer, at the moment i have technical knowledge about <span
+                class="text-purple-700">PHP</span>, <span
+                class="text-purple-700">HTML</span>, <span
+                class="text-purple-700">JS</span> e <span
+                class="text-purple-700">TailwindCSS</span>, and the only personal project i worked on is this portfolio.
+        <p class="font-mono mt-4 tracking-wider ml-32 text-black dark:text-white">
+            At the moment i am looking for a job opportunity to join the technology market, i'm always trying to improve
+            my technical knowledge, and by this, when i learn something new, i will update here, thank you for your
+            visit!
+        </p>
+    </div>
+
+    <script src="../app.js"></script>
+</div>
+
+</body>
+</html>
